@@ -1,6 +1,5 @@
 import * as React from 'react';
 import styled from '@mui/system/styled';
-import Grid from '@mui/system/Unstable_Grid';
 import Box from '@mui/system/Box';
 import Button from '@mui/material/Button';
 import Alert from '@mui/material/Alert';
@@ -18,34 +17,37 @@ const Item = styled('div')(({ theme }) => ({
 
 export default function RowAndColumnSpacing() {
   return (
-    <Box sx={{ width: '100%', mt: 1.5 }}>
-      <Grid container rowSpacing={2} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-        <Grid xs={6}>
-          <Item sx={{ backgroundColor: '#111111', border: 0 }}>
-            <Button variant="outlined" size="large" sx={{ width: '215px' }}>
-              CLAIM PLAYER
-            </Button>
-          </Item>
-        </Grid>
-        <Grid xs={6}>
-          <Item sx={{ backgroundColor: '#111111', border: 0 }}></Item>
-        </Grid>
-        <Grid xs={6}>
-          <Item sx={{ backgroundColor: '#111111', border: 0 }}>
-            <Button variant="outlined" size="large" sx={{ width: '215px' }}>
-              RADIO COMMANDS
-            </Button>
-          </Item>
-        </Grid>
-        <Grid xs={6}>
-          <Item sx={{ backgroundColor: '#111111', border: 0 }}>
-            <Alert severity="info"> Player successfully claimed! </Alert>
-          </Item>
-        </Grid>
-      </Grid>
-      <Button variant="outlined" size="small">
-        <FormControlLabel control={<Checkbox />} label="Show fugitive location" />
+    <Box
+      sx={{
+        pt: 2,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'column',
+        gap: 2,
+      }}>
+      <Button variant="outlined" size="large" sx={{ height: '40px', width: '250px' }}>
+        RADIO COMMANDS
       </Button>
+      <Button variant="outlined" size="small">
+        <FormControlLabel
+          control={<Checkbox />}
+          label="Show fugitive location"
+          sx={{
+            height: '35px',
+            width: '250px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        />
+      </Button>
+
+      <Button variant="outlined" size="large" sx={{ height: '40px', width: '250px' }}>
+        CLAIM PLAYER
+      </Button>
+
+      <Alert severity="info"> Player successfully claimed! </Alert>
     </Box>
   );
 }

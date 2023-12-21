@@ -10,13 +10,13 @@ import Chip from '@mui/material/Chip';
 
 const columns = [
   { id: 'name', label: 'Name', minWidth: 10 },
-  { id: 'code', label: 'Class', minWidth: 10 },
+  { id: 'code', label: 'Class', minWidth: 110 },
   {
-    id: 'population',
+    id: 'wantedLevel',
     label: 'Wanted',
     minWidth: 10,
     align: 'right',
-    format: (value) => value.toLocaleString('en-US'),
+    sortable: true,
   },
   {
     id: 'size',
@@ -35,20 +35,21 @@ const columns = [
   { id: 'status', label: 'Status', minWidth: 10 },
 ];
 
-function createData(name, code, population, size, status) {
+function createData(name, code, wantedLevel, size, status) {
   const density = '0m';
-  return { name, code, population, size, density, status };
+  return { name, code, wantedLevel, size, density, status };
 }
 
 const rows = [
   createData('kipt', 'Robber', 42, 'LS', 'Claimed'),
-  createData('SAES>Tombaa', 'CLO', 42, 'SF', 'Unclaimed'),
+  createData('SAES>Tombaa', 'CLO', 42, 'LV', 'Unclaimed'),
   createData('jay', 'Racer', 34, 'LS', 'Unclaimed'),
   createData('Zenthynell', 'Drug Dealer', 42, 'SF', 'Claimed'),
   createData('Crash', 'SAHA', 36, 'SA', 'Claimed'),
   createData('SAES>Tilong', 'ZIP', 5, 'SA', 'Claimed'),
-  createData('SAES>Rennie', 'CLO', 42, 'LV', 'Unclaimed'),
-  createData('SAES>Rennie', 'CLO', 42, 'LV', 'Unclaimed'),
+  createData('SAES>Rennie', 'Drug Dealer', 42, 'LV', 'Unclaimed'),
+  createData('Franklin', 'Robber', 42, 'LV', 'Claimed'),
+  createData('Michael', 'Drug Dealer', 3, 'SF', 'Claimed'),
 ];
 
 export default function StickyHeadTable() {
