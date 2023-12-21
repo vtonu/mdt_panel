@@ -16,6 +16,14 @@ const rows = [
   createData('SAES>Brophy', 'Blaine County'),
   createData('[FBI]Carter', 'Richman'),
   createData('SAES>Kain', 'Vinewood'),
+  createData('[SWAT]Skes', 'Downtown Los Santos'),
+  createData('SAES>Brophy', 'Blaine County'),
+  createData('[FBI]Carter', 'Richman'),
+  createData('SAES>Kain', 'Vinewood'),
+  createData('[SWAT]Skes', 'Downtown Los Santos'),
+  createData('SAES>Brophy', 'Blaine County'),
+  createData('[FBI]Carter', 'Richman'),
+  createData('SAES>Kain', 'Vinewood'),
 ];
 
 export default function AccessibleTable() {

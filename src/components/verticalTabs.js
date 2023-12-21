@@ -97,7 +97,7 @@ export default function VerticalTabs() {
         </Box>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <Box sx={{ p: 0.5, height: 400, overflow: 'hidden' }}>
+        <Box sx={{ p: 0.5, height: 475, overflow: 'hidden' }}>
           <AutoGrid></AutoGrid>
         </Box>
       </TabPanel>

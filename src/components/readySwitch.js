@@ -38,15 +38,35 @@ const Android12Switch = styled(Switch)(({ theme }) => ({
 }));
 
 const StyledFormControlLabel = styled(FormControlLabel)({
-  color: 'wheat', // replace with the color you want for the text
+  color: 'aliceblue', // replace with the color you want for the text
 });
 
 export default function ReadySwitchToggle() {
+  const [patrol, setPatrol] = React.useState(false);
+  const [rp, setRp] = React.useState(true);
+
+  const handlePatrolChange = (event) => {
+    setPatrol(event.target.checked);
+    if (event.target.checked) {
+      setRp(false);
+    }
+  };
+
+  const handleRpChange = (event) => {
+    setRp(event.target.checked);
+    if (event.target.checked) {
+      setPatrol(false);
+    }
+  };
+
   return (
     <FormGroup>
-      <StyledFormControlLabel control={<Android12Switch />} label="Available for patrol" />
       <StyledFormControlLabel
-        control={<Android12Switch defaultChecked />}
+        control={<Android12Switch checked={patrol} onChange={handlePatrolChange} />}
+        label="Available for patrol"
+      />
+      <StyledFormControlLabel
+        control={<Android12Switch checked={rp} onChange={handleRpChange} />}
         label="Available for RP"
       />
     </FormGroup>

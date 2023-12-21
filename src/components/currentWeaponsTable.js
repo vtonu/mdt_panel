@@ -13,19 +13,19 @@ function createData(playerNames, playerDistance) {
 
 const rows = [
   createData('[SWAT]Sou', '12m'),
-  createData('[SWAT]General', '250m'),
+  createData('[SWAT]General', '252m'),
   createData('[FBI]Russell', '3241m'),
-  createData('[PARS]Flacko', '300m'),
+  createData('[PARS]Flacko', '331m'),
   createData('[PARS]Phantom', '152m'),
   createData('[SWAT]candi', '241m'),
-  createData('[SWAT]Asgal', '3333m'),
+  createData('[SWAT]Asgal', '33m'),
   createData('[SWAT]Sou', '12m'),
-  createData('[SWAT]General', '250m'),
+  createData('[SWAT]General', '22m'),
   createData('[FBI]Russell', '3241m'),
-  createData('[PARS]Flacko', '300m'),
+  createData('[PARS]Flacko', '334m'),
   createData('[PARS]Phantom', '152m'),
   createData('[SWAT]candi', '241m'),
-  createData('[SWAT]Asgal', '3333m'),
+  createData('[SWAT]Asgal', '1343m'),
 ];
 
 export default function AccessibleTable() {

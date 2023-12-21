@@ -30,7 +30,7 @@ function App() {
             fontSize: '0.875rem',
             fontWeight: '700',
           }}>
-          <Box sx={{ p: 1, color: 'white' }}>SAES V MDT Panel</Box>
+          <Box sx={{ p: 1, color: 'white' }}>SAES V MDT Panel v0.3</Box>
           <FixedContainer></FixedContainer>
           <Box sx={{ p: 1 }} display="flex" justifyContent="space-between">
             <Button variant="outlined" size="small">

@@ -6,11 +6,12 @@ import Grid from '@mui/material/Unstable_Grid2';
 import Button from '@mui/material/Button';
 /* import SelectTextFields from './ammoTypeSelect'; */
 /* import WestOutlinedIcon from '@mui/icons-material/WestOutlined'; */
-import EastOutlined from '@mui/icons-material/EastOutlined';
+/* import EastOutlined from '@mui/icons-material/EastOutlined'; */
 import AccessibleTable from './currentWeaponsTable';
 import AccessibleTable2 from './storageTable';
 import ReadySwitchToggle from './readySwitch';
 import CellTowerOutlinedIcon from '@mui/icons-material/CellTowerOutlined';
+import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -45,17 +46,18 @@ export default function AutoGrid() {
           <Item sx={{ color: '#e91e63', backgroundColor: '#111111' }}>
             <Box
               sx={{
-                display: 'flexbox',
-                height: 'auto',
+                display: 'flex',
+                flexDirection: 'column',
               }}>
+              <Button variant="outlined" size="small" sx={{ mt: 1 }}>
+                ACCEPT
+              </Button>
               <Button variant="outlined" size="small" sx={{ mt: 1 }}>
                 ASSIST
               </Button>
               <ReadySwitchToggle></ReadySwitchToggle>
+              {/* <SettingsOutlinedIcon sx={{ color: '#3d5afe' }}></SettingsOutlinedIcon> */}
             </Box>
-            <Button variant="outlined" size="small">
-              <EastOutlined></EastOutlined>
-            </Button>
           </Item>
         </Grid>
         <Grid xs>
