@@ -1,4 +1,4 @@
-https://github.com/vtonu/mdt_panel/assets/56773210/c5a99f3d-3674-4e0f-be55-74a4e6ccf58e
+https://github.com/vtonu/mdt_panel/assets/56773210/9ac59f41-f5d0-4f98-8e74-4c6c8ad270e5
 
 ## Available Scripts
 
