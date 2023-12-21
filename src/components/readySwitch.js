@@ -63,7 +63,7 @@ export default function ReadySwitchToggle() {
     <FormGroup>
       <StyledFormControlLabel
         control={<Android12Switch checked={patrol} onChange={handlePatrolChange} />}
-        label="Available for patrol"
+        label="Available for Backup"
       />
       <StyledFormControlLabel
         control={<Android12Switch checked={rp} onChange={handleRpChange} />}

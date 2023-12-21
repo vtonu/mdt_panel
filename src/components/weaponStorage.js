@@ -11,7 +11,8 @@ import AccessibleTable from './currentWeaponsTable';
 import AccessibleTable2 from './storageTable';
 import ReadySwitchToggle from './readySwitch';
 import CellTowerOutlinedIcon from '@mui/icons-material/CellTowerOutlined';
-import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
+/* import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined'; */
+import AdminPanelSettingsOutlinedIcon from '@mui/icons-material/AdminPanelSettingsOutlined';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -62,7 +63,10 @@ export default function AutoGrid() {
         </Grid>
         <Grid xs>
           <Item sx={{ mb: 1, color: '#3d5afe', backgroundColor: '#111111' }}>
-            Role-Play Personnel
+            <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+              Role-Play Personnel
+              <AdminPanelSettingsOutlinedIcon></AdminPanelSettingsOutlinedIcon>
+            </Box>
           </Item>
           <AccessibleTable2></AccessibleTable2>
         </Grid>
