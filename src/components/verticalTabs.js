@@ -43,9 +43,21 @@ function a11yProps(index) {
 
 export default function VerticalTabs() {
   const [value, setValue] = React.useState(0);
+  const [status, setStatus] = React.useState('Available');
+  const [color, setColor] = React.useState('#00e676');
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
+  };
+
+  const handleClick = () => {
+    if (status === 'Available') {
+      setStatus('Unavailable');
+      setColor('red');
+    } else {
+      setStatus('Available');
+      setColor('#00e676');
+    }
   };
 
   return (
@@ -75,10 +87,10 @@ export default function VerticalTabs() {
       <TabPanel value={value} index={0}>
         <Box>
           <Box sx={{ p: 1, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <Button variant="outlined" size="small" sx={{ m: 1 }}>
+            <Button variant="outlined" size="small" sx={{ m: 1 }} onClick={handleClick}>
               activate
             </Button>
-            Status: <Box sx={{ color: '#00e676', pl: 1 }}>Available</Box>{' '}
+            Status: <Box sx={{ color: color, pl: 1 }}>{status}</Box>{' '}
           </Box>
         </Box>
         <Box sx={{ pt: 40 }}>
