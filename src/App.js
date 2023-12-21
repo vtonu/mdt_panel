@@ -17,8 +17,8 @@ function App() {
       <ThemeProvider theme={theme}>
         <Box
           sx={{
-            width: 540,
-            height: 546,
+            width: 650,
+            height: 650,
             p: 1.2,
             m: 0,
             bgcolor: (theme) => (theme.palette.mode === 'dark' ? '#101010' : 'grey.50'),

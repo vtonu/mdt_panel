@@ -49,11 +49,11 @@ export default function VerticalTabs() {
   };
 
   return (
-    <Box sx={{ display: 'flexbox', height: 450 }}>
+    <Box sx={{ display: 'flexbox', height: 550 }}>
       <Tabs
         value={value}
         onChange={handleChange}
-        aria-label="Disk Tabs"
+        aria-label="SAES V MDT System"
         textColor="primary"
         indicatorColor="secondary">
         <Tab
@@ -62,12 +62,12 @@ export default function VerticalTabs() {
           sx={{ borderRight: 1, borderBottom: 1, borderColor: 'divider' }}
         />
         <Tab
-          label="SQUAD SUPPORT"
+          label="DISPATCH"
           {...a11yProps(1)}
           sx={{ borderRight: 1, borderBottom: 1, borderColor: 'divider' }}
         />
         <Tab
-          label="Dispatch"
+          label="SQUAD SUPPORT"
           {...a11yProps(2)}
           sx={{ borderRight: 1, borderBottom: 1, borderColor: 'divider' }}
         />
@@ -80,15 +80,8 @@ export default function VerticalTabs() {
             </Button>
             Status: <Box sx={{ color: '#00e676', pl: 1 }}>Available</Box>{' '}
           </Box>
-          <Box sx={{ p: 1, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <Button variant="outlined" size="small" sx={{ m: 1 }}>
-              Claim
-            </Button>
-            Status: <Box sx={{ color: '#dd2c00', pl: 1 }}>Unavailable</Box>{' '}
-            <Box sx={{ display: 'flexbox' }}></Box>
-          </Box>
         </Box>
-        <Box sx={{ pt: 10 }}>
+        <Box sx={{ pt: 40 }}>
           <img src={require('./saeslogo.png')} width="150" alt="saeslogo" />
         </Box>
       </TabPanel>

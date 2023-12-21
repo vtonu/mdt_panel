@@ -9,25 +9,25 @@ import TableRow from '@mui/material/TableRow';
 import Chip from '@mui/material/Chip';
 
 const columns = [
-  { id: 'name', label: 'ID', minWidth: 10 },
-  { id: 'code', label: 'Names', minWidth: 10 },
+  { id: 'name', label: 'Name', minWidth: 10 },
+  { id: 'code', label: 'Class', minWidth: 10 },
   {
     id: 'population',
-    label: 'Health',
+    label: 'Wanted',
     minWidth: 10,
     align: 'right',
     format: (value) => value.toLocaleString('en-US'),
   },
   {
     id: 'size',
-    label: 'Fuel',
+    label: 'Zone',
     minWidth: 10,
     align: 'right',
     format: (value) => value.toLocaleString('en-US'),
   },
   {
     id: 'density',
-    label: 'Cost',
+    label: 'Distance',
     minWidth: 10,
     align: 'right',
     format: (value) => value.toFixed(2),
@@ -36,23 +36,24 @@ const columns = [
 ];
 
 function createData(name, code, population, size, status) {
-  const density = '$0';
+  const density = '0m';
   return { name, code, population, size, density, status };
 }
 
 const rows = [
-  createData('12', 'Cheetah', 1000, 25, 'Spawned'),
-  createData('31', 'Sultan', 712, 37, 'Spawned'),
-  createData('42', 'NRG-500', 738, 15, 'Spawned'),
-  createData('31', 'Bullet', 1000, 100, 'Stored'),
-  createData('11', 'Infernus', 234, 22, 'Spawned'),
-  createData('75', 'Jester', 1000, 66, 'Spawned'),
-  createData('23', 'Tank', 1000, 66, 'Stored'),
+  createData('kipt', 'Robber', 42, 'LS', 'Claimed'),
+  createData('SAES>Tombaa', 'CLO', 42, 'SF', 'Unclaimed'),
+  createData('jay', 'Racer', 34, 'LS', 'Unclaimed'),
+  createData('Zenthynell', 'Drug Dealer', 42, 'SF', 'Claimed'),
+  createData('Crash', 'SAHA', 36, 'SA', 'Claimed'),
+  createData('SAES>Tilong', 'ZIP', 5, 'SA', 'Claimed'),
+  createData('SAES>Rennie', 'CLO', 42, 'LV', 'Unclaimed'),
+  createData('SAES>Rennie', 'CLO', 42, 'LV', 'Unclaimed'),
 ];
 
 export default function StickyHeadTable() {
-  const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(10);
+  const [page] = React.useState(0);
+  const [rowsPerPage] = React.useState(10);
 
   return (
     <Paper sx={{ width: '100%', overflow: 'auto' }}>
@@ -83,7 +84,7 @@ export default function StickyHeadTable() {
                             variant="outlined"
                             size="small"
                             label={value}
-                            color={value === 'Stored' ? 'success' : 'error'}
+                            color={value === 'Unclaimed' ? 'success' : 'error'}
                           />
                         ) : column.format && typeof value === 'number' ? (
                           column.format(value)

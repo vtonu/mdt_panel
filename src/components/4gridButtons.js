@@ -3,6 +3,9 @@ import styled from '@mui/system/styled';
 import Grid from '@mui/system/Unstable_Grid';
 import Box from '@mui/system/Box';
 import Button from '@mui/material/Button';
+import Alert from '@mui/material/Alert';
+import Checkbox from '@mui/material/Checkbox';
+import FormControlLabel from '@mui/material/FormControlLabel';
 
 const Item = styled('div')(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -20,32 +23,29 @@ export default function RowAndColumnSpacing() {
         <Grid xs={6}>
           <Item sx={{ backgroundColor: '#111111', border: 0 }}>
             <Button variant="outlined" size="large" sx={{ width: '215px' }}>
-              Park Vehicle
+              CLAIM PLAYER
             </Button>
           </Item>
+        </Grid>
+        <Grid xs={6}>
+          <Item sx={{ backgroundColor: '#111111', border: 0 }}></Item>
         </Grid>
         <Grid xs={6}>
           <Item sx={{ backgroundColor: '#111111', border: 0 }}>
             <Button variant="outlined" size="large" sx={{ width: '215px' }}>
-              Repair Vehicle
+              RADIO COMMANDS
             </Button>
           </Item>
         </Grid>
         <Grid xs={6}>
           <Item sx={{ backgroundColor: '#111111', border: 0 }}>
-            <Button variant="outlined" size="large" sx={{ width: '215px' }}>
-              Spawn Vehicle
-            </Button>
-          </Item>
-        </Grid>
-        <Grid xs={6}>
-          <Item sx={{ backgroundColor: '#111111', border: 0 }}>
-            <Button variant="outlined" size="large">
-              Repair All Vehicles
-            </Button>
+            <Alert severity="info"> Player successfully claimed! </Alert>
           </Item>
         </Grid>
       </Grid>
+      <Button variant="outlined" size="small">
+        <FormControlLabel control={<Checkbox />} label="Show fugitive location" />
+      </Button>
     </Box>
   );
 }
