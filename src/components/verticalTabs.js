@@ -62,38 +62,34 @@ export default function VerticalTabs() {
           sx={{ borderRight: 1, borderBottom: 1, borderColor: 'divider' }}
         />
         <Tab
-          label="PLAYER LOCATOR"
+          label="SQUAD SUPPORT"
           {...a11yProps(1)}
           sx={{ borderRight: 1, borderBottom: 1, borderColor: 'divider' }}
         />
         <Tab
-          label="Weapon Storage"
+          label="Dispatch"
           {...a11yProps(2)}
           sx={{ borderRight: 1, borderBottom: 1, borderColor: 'divider' }}
         />
       </Tabs>
       <TabPanel value={value} index={0}>
         <Box>
-          <Box sx={{ p: 1 }}>Text Box 1</Box>
-          <Box sx={{ p: 1 }}>Text Box 2</Box>
-          <Box sx={{ p: 1 }}>Text Box 3</Box>
-          <Box sx={{ p: 1 }}>
-            Status: <Box sx={{ color: '#00e676' }}>Available</Box>{' '}
-          </Box>
-          <Box sx={{ p: 1 }}>
-            Report:<Box sx={{ color: '#dd2c00' }}>Dispatched</Box>{' '}
-          </Box>
-          <Box sx={{ display: 'flexbox' }}>
+          <Box sx={{ p: 1, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <Button variant="outlined" size="small" sx={{ m: 1 }}>
-              Sell
+              activate
             </Button>
+            Status: <Box sx={{ color: '#00e676', pl: 1 }}>Available</Box>{' '}
+          </Box>
+          <Box sx={{ p: 1, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <Button variant="outlined" size="small" sx={{ m: 1 }}>
-              Buy
+              Claim
             </Button>
+            Status: <Box sx={{ color: '#dd2c00', pl: 1 }}>Unavailable</Box>{' '}
+            <Box sx={{ display: 'flexbox' }}></Box>
           </Box>
         </Box>
-        <Box sx={{ pt: 2, pl: 2 }}>
-          <img src={require('./saeslogo.png')} width="150" />
+        <Box sx={{ pt: 10 }}>
+          <img src={require('./saeslogo.png')} width="150" alt="saeslogo" />
         </Box>
       </TabPanel>
       <TabPanel value={value} index={1}>

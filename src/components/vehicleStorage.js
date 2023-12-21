@@ -29,7 +29,7 @@ export default function AccessibleTable() {
           <TableRow>
             <TableCell>ID</TableCell>
             <TableCell align="right">Names</TableCell>
-            <TableCell align="right">Health</TableCell>
+            <TableCell align="right">Class</TableCell>
             <TableCell align="right">Fuel</TableCell>
             <TableCell align="right">Cost</TableCell>
             <TableCell align="right">Status</TableCell>
