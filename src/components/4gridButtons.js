@@ -26,7 +26,7 @@ export default function RowAndColumnSpacing() {
         flexDirection: 'column',
         gap: 2,
       }}>
-      <Button variant="outlined" size="large" sx={{ height: '40px', width: '250px' }}>
+      <Button variant="outlined" size="large" sx={{ height: '40px', width: '275px' }}>
         RADIO COMMANDS
       </Button>
       <Button variant="outlined" size="small">
@@ -43,7 +43,7 @@ export default function RowAndColumnSpacing() {
         />
       </Button>
 
-      <Button variant="outlined" size="large" sx={{ height: '40px', width: '250px' }}>
+      <Button variant="outlined" size="large" sx={{ height: '40px', width: '275px' }}>
         CLAIM PLAYER
       </Button>
 

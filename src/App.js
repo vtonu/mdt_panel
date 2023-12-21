@@ -17,7 +17,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <Box
           sx={{
-            width: 650,
+            width: 750,
             height: 650,
             p: 1.2,
             m: 0,

@@ -47,7 +47,7 @@ const rows = [
   createData('Zenthynell', 'Drug Dealer', 42, 'SF', 'Claimed'),
   createData('Crash', 'SAHA', 36, 'SA', 'Claimed'),
   createData('SAES>Tilong', 'ZIP', 5, 'SA', 'Claimed'),
-  createData('SAES>Rennie', 'Drug Dealer', 42, 'LV', 'Unclaimed'),
+  createData('SAES>Rennie', 'CLO', 42, 'LV', 'Unclaimed'),
   createData('Franklin', 'Robber', 42, 'LV', 'Claimed'),
   createData('Michael', 'Drug Dealer', 3, 'SF', 'Claimed'),
 ];
