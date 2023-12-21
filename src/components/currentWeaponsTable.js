@@ -7,49 +7,45 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
-function createData(weaponType, ammoType) {
-  return { weaponType, ammoType };
+function createData(playerNames, playerDistance) {
+  return { playerNames, playerDistance };
 }
 
 const rows = [
-  createData('Nightstick', 1),
-  createData('Silenced', 250),
-  createData('Shotgun', 300),
-  createData('Grenade', 300),
-  createData('Prachute', 1),
-  createData('MP5', 241),
-  createData('M4', 333),
-  createData('SMG Mk II', 1333),
-  createData('SMG Mk I', 13),
-  createData('Nightstick', 1),
-  createData('Silenced', 250),
-  createData('Shotgun', 300),
-  createData('Grenade', 300),
-  createData('Prachute', 1),
-  createData('MP5', 241),
-  createData('M4', 333),
-  createData('SMG Mk II', 1333),
-  createData('SMG Mk I', 13),
+  createData('[SWAT]Sou', '12m'),
+  createData('[SWAT]General', '250m'),
+  createData('[FBI]Russell', '3241m'),
+  createData('[PARS]Flacko', '300m'),
+  createData('[PARS]Phantom', '152m'),
+  createData('[SWAT]candi', '241m'),
+  createData('[SWAT]Asgal', '3333m'),
+  createData('[SWAT]Sou', '12m'),
+  createData('[SWAT]General', '250m'),
+  createData('[FBI]Russell', '3241m'),
+  createData('[PARS]Flacko', '300m'),
+  createData('[PARS]Phantom', '152m'),
+  createData('[SWAT]candi', '241m'),
+  createData('[SWAT]Asgal', '3333m'),
 ];
 
 export default function AccessibleTable() {
   return (
-    <TableContainer component={Paper}>
+    <TableContainer component={Paper} sx={{ overflow: 'auto' }}>
       <Table size="small" aria-label="caption table">
         {/* <caption>Current weapons table.</caption> */}
         <TableHead>
           <TableRow>
-            <TableCell>Weapon</TableCell>
-            <TableCell>Ammo</TableCell>
+            <TableCell>Name</TableCell>
+            <TableCell>Distance</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map((row) => (
-            <TableRow key={row.weaponType}>
+            <TableRow key={row.playerNames}>
               <TableCell component="th" scope="row">
-                {row.weaponType}
+                {row.playerNames}
               </TableCell>
-              <TableCell>{row.ammoType}</TableCell>
+              <TableCell>{row.playerDistance}</TableCell>
             </TableRow>
           ))}
         </TableBody>

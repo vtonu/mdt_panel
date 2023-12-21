@@ -7,53 +7,34 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
-function createData(weaponType, ammoType) {
-  return { weaponType, ammoType };
+function createData(playerName, playerLocations) {
+  return { playerName, playerLocations };
 }
 
 const rows = [
-  createData('Nightstick', 1),
-  createData('Silenced', 250),
-  createData('Shotgun', 300),
-  createData('Grenade', 3),
-  createData('Nightstick', 1),
-  createData('Silenced', 250),
-  createData('Shotgun', 300),
-  createData('Grenade', 300),
-  createData('Prachute', 1),
-  createData('MP5', 241),
-  createData('M4', 333),
-  createData('SMG Mk II', 1333),
-  createData('SMG Mk I', 13),
-  createData('Nightstick', 1),
-  createData('Silenced', 250),
-  createData('Shotgun', 300),
-  createData('Grenade', 300),
-  createData('Prachute', 1),
-  createData('MP5', 241),
-  createData('M4', 333),
-  createData('SMG Mk II', 1333),
-  createData('SMG Mk I', 13),
+  createData('[SWAT]Skes', 'Downtown Los Santos'),
+  createData('SAES>Brophy', 'Blaine County'),
+  createData('[FBI]Carter', 'Richman'),
+  createData('SAES>Kain', 'Vinewood'),
 ];
 
 export default function AccessibleTable() {
   return (
     <TableContainer component={Paper}>
       <Table size="small" aria-label="caption table">
-        {/* <caption>Storage table.</caption> */}
         <TableHead>
           <TableRow>
-            <TableCell>Weapon</TableCell>
-            <TableCell>Ammo</TableCell>
+            <TableCell>Name</TableCell>
+            <TableCell>Location</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map((row) => (
-            <TableRow key={row.weaponType}>
+            <TableRow key={row.playerName}>
               <TableCell component="th" scope="row">
-                {row.weaponType}
+                {row.playerName}
               </TableCell>
-              <TableCell>{row.ammoType}</TableCell>
+              <TableCell>{row.playerLocations}</TableCell>
             </TableRow>
           ))}
         </TableBody>
